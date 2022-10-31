@@ -87,6 +87,10 @@ let mapMenu = {...menu}
 
 containerDom.addEventListener('click', listen)
 
+window.addEventListener("load", function(){
+  mapMenu = menu
+  allMenu()});
+
 function listen(e){
   console.log(e.target.innerHTML)
   if(e.target.innerHTML == 'All'){
@@ -107,12 +111,7 @@ function listen(e){
   }    
 }
 
-
 const body = document.querySelector(".section-center")
-
-window.addEventListener("load", function(){
-  mapMenu = menu
-  allMenu()});
 
 function allMenu(){
   while (body.hasChildNodes()) {
